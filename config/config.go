@@ -5,6 +5,8 @@ import (
 )
 
 const (
+	STATIC_DIR = "static"
+	
 	SERVER_ADDR = "127.0.0.1:9999"
 	
 	DB_USERNAME = "root"
