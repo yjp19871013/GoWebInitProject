@@ -6,6 +6,7 @@ import (
 
 const (
 	STATIC_DIR = "static"
+	STATIC_URL = "/static/"
 	
 	SERVER_ADDR = "127.0.0.1:9999"
 	

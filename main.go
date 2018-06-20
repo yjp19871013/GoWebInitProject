@@ -9,8 +9,8 @@ import (
 
 func main() {
 	
-	http.Handle("/static/", 
-		http.StripPrefix("/static/", http.FileServer(http.Dir(config.STATIC_DIR))))
+	http.Handle(config.STATIC_URL, 
+		http.StripPrefix(config.STATIC_URL, http.FileServer(http.Dir(config.STATIC_DIR))))
 	
 	for path, handleFunc := range handlers.Router{
 		http.HandleFunc(path, handleFunc)
