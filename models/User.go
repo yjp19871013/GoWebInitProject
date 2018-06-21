@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	"book_borrow/tools" 
 )
 
 type User struct {
@@ -26,6 +27,8 @@ func (u *User) Create() error {
 	if len(users) != 0 {
 		return fmt.Errorf("%s, 该用户已存在", u.Username)
 	}
+	
+    u.Password = tools.MD5Generate(u.Password)
 
 	db.Create(u)
 	
